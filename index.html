@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Компас души: расчёт по дате рождения</title>
-<meta name="description" content="Введите дату рождения и узнайте шесть чисел Компаса души: душа, карма, дары, судьба, путь и планета.">
+<title>Компас души: расчёт и разбор по дате рождения</title>
+<meta name="description" content="Введите дату рождения и получите разбор карты души: шесть секторов, ваши числа и планета. Можно скачать PDF или Word.">
 <link rel="stylesheet" href="fonts.css">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -14,10 +14,12 @@
   <header class="top">
     <div class="logo">Точка опоры</div>
     <h1>Компас души</h1>
-    <p class="lead">Расчёт по дате рождения: шесть позиций вашей карты и планета, которая стоит за вашим числом. Считается в браузере, дата никуда не отправляется.</p>
+    <p class="lead">Карта вашей души по дате рождения. Введите дату и получите разбор по шести секторам: как вы относитесь к себе, чему учитесь через людей, что вам дано, какой опыт вы принесли и какая планета стоит за вашим числом.</p>
   </header>
 
   <section class="card form" id="form">
+    <label for="name">Имя (по желанию)</label>
+    <input id="name" type="text" autocomplete="off" placeholder="Например, Анна">
     <label for="date">Дата рождения</label>
     <input id="date" type="text" inputmode="numeric" autocomplete="off" placeholder="ДД.ММ.ГГГГ" maxlength="10">
     <div class="pal">
@@ -26,13 +28,12 @@
       <button type="button" data-p="lilac">Сирень и золото</button>
       <button type="button" data-p="tealpink">Бирюза и розовый</button>
     </div>
-    <button type="button" id="go" class="btn">Рассчитать</button>
+    <button type="button" id="go" class="btn">Показать мою карту</button>
     <p class="err" id="err" hidden></p>
-    <p class="note">Дату нужно вводить настоящую, по которой человек родился. Карта души составляется один раз на всю жизнь.</p>
+    <p class="note">Дату нужно вводить настоящую, по которой человек родился. Разбор составляется один раз на всю жизнь.</p>
   </section>
 
   <section id="result" hidden></section>
-
   <section class="card club">
     <div class="eb">Клуб и канал</div>
     <h2>Клуб Точка опоры</h2>
@@ -44,8 +45,7 @@
   </section>
   <footer class="foot">Точка опоры · Ваш путь. Ваша сила. Ваша судьба.</footer>
 </main>
-<script src="calc.js"></script>
-<script>window.TAGS = {"1": "Начало, перспектива, дорога вперёд.", "2": "Чуткость, пара, равновесие.", "3": "Радость, слово, творчество.", "4": "Структура, труд, власть над собой.", "5": "Смысл, движение, переход.", "6": "Красота, любовь, переход к материальному.", "7": "Глубина, вера, внутренняя свобода.", "8": "Сила, глубина, бесконечность.", "9": "Завершение, мудрость, служение."};</script>
+<script src="data.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
