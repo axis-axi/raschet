@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Компас души: расчёт по дате рождения</title>
+<meta name="description" content="Введите дату рождения и узнайте шесть чисел Компаса души: душа, карма, дары, судьба, путь и планета.">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-pal="vino">
+<div class="paper"></div>
+<main class="wrap">
+  <header class="top">
+    <div class="logo">Точка опоры</div>
+    <h1>Компас души</h1>
+    <p class="lead">Расчёт по дате рождения: шесть позиций вашей карты и планета, которая стоит за вашим числом. Считается в браузере, дата никуда не отправляется.</p>
+  </header>
+
+  <section class="card form" id="form">
+    <label for="date">Дата рождения</label>
+    <input id="date" type="text" inputmode="numeric" autocomplete="off" placeholder="ДД.ММ.ГГГГ" maxlength="10">
+    <div class="pal">
+      <span>Гамма</span>
+      <button type="button" data-p="vino" class="on">Беж и вино</button>
+      <button type="button" data-p="lilac">Сирень и золото</button>
+      <button type="button" data-p="tealpink">Бирюза и розовый</button>
+    </div>
+    <button type="button" id="go" class="btn">Рассчитать</button>
+    <p class="err" id="err" hidden></p>
+    <p class="note">Дату нужно вводить настоящую, по которой человек родился. Карта души составляется один раз на всю жизнь.</p>
+  </section>
+
+  <section id="result" hidden></section>
+
+  <section class="card club">
+    <div class="eb">Клуб и канал</div>
+    <h2>Клуб Точка опоры</h2>
+    <p>Обучение по подписке: девять факультетов и записанные уроки, которые можно смотреть в своём темпе. Матрица, психология, нейросети, прогностика и всё, что нужно практику в работе.</p>
+    <div class="acts">
+      <a class="btn" href="https://tochka-opory.lpxl.ru/podpiska" target="_blank" rel="noopener">Перейти в клуб</a>
+      <a class="btn alt" href="https://t.me/nadin_matrix" target="_blank" rel="noopener">Телеграм-канал</a>
+    </div>
+  </section>
+  <footer class="foot">Точка опоры · Ваш путь. Ваша сила. Ваша судьба.</footer>
+</main>
+<script src="calc.js"></script>
+<script>window.TAGS = {"1": "Начало, перспектива, дорога вперёд.", "2": "Чуткость, пара, равновесие.", "3": "Радость, слово, творчество.", "4": "Структура, труд, власть над собой.", "5": "Смысл, движение, переход.", "6": "Красота, любовь, переход к материальному.", "7": "Глубина, вера, внутренняя свобода.", "8": "Сила, глубина, бесконечность.", "9": "Завершение, мудрость, служение."};</script>
+<script src="app.js"></script>
+</body>
+</html>
